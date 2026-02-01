@@ -7,13 +7,14 @@ import {
   Sparkles,
   ChevronDown
 } from 'lucide-react';
+import profilePhoto from '../assets/photo.jpeg';
 
 const Home = () => {
   return (
     <div className="page-container">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 to-white dark:from-gray-900 dark:to-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 to-white dark:from-gray-900 dark:to-gray-800 md:py-20 py-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full pb-20">
           <div className="space-y-8">
             {/* Greeting */}
             <div className="space-y-4">
@@ -31,6 +32,22 @@ const Home = () => {
               </div>
             </div>
 
+            {/* Profile Photo */}
+            <div className="flex justify-center">
+              <div className="relative">
+                <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl">
+                  <img
+                    src={profilePhoto}
+                    alt="Abdulrahman Omar"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="absolute -bottom-2 -right-2 bg-primary-600 text-white rounded-full p-3 shadow-lg">
+                  <Code className="h-6 w-6" />
+                </div>
+              </div>
+            </div>
+
             {/* Bio */}
             <p className="max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
               Passionate web developer building modern, scalable applications using React, Node.js, and MongoDB. 
@@ -39,28 +56,27 @@ const Home = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="/projects" size="lg">
-                View Projects
-              </Button>
               <Button 
                 href="/contact" 
-                variant="outline" 
+                variant="primary"
                 size="lg"
+                className="bg-primary-600 hover:bg-primary-700 text-white border-2 border-primary-600 hover:border-primary-700 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
               >
                 Contact Me
               </Button>
               <Button 
                 href="/resume.pdf" 
-                variant="secondary" 
+                variant="outline"
                 size="lg"
                 download
+                className="border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white dark:border-primary-400 dark:text-primary-400 dark:hover:bg-primary-400 dark:hover:text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
               >
                 Download Resume
               </Button>
             </div>
 
             {/* Scroll Indicator */}
-            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 animate-bounce">
               <ChevronDown className="h-6 w-6 text-gray-400" />
             </div>
           </div>
