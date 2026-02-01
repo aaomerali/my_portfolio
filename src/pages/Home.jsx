@@ -1,13 +1,23 @@
 import { Link } from 'react-router-dom';
 import Button from '../components/Button';
+import Card from '../components/Card';
 import { technicalSkills, softSkills } from '../data/skills';
+import { projects } from '../data/projects';
 import { 
   Code, 
   GraduationCap, 
   Sparkles,
-  ChevronDown
+  ChevronDown,
+  ArrowRight
 } from 'lucide-react';
 import profilePhoto from '../assets/photo.jpeg';
+import aboutPhoto from '../assets/photo2.jpg';
+import gallery1 from '../assets/gallery/1.jpg';
+import gallery2 from '../assets/gallery/2.jpg';
+import gallery3 from '../assets/gallery/3.jpg';
+import gallery4 from '../assets/gallery/4.jpg';
+import gallery5 from '../assets/gallery/5.jpg';
+import gallery6 from '../assets/gallery/6.jpg';
 
 const Home = () => {
   return (
@@ -126,13 +136,15 @@ const Home = () => {
             </div>
 
             <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900 dark:to-primary-800 rounded-2xl flex items-center justify-center">
-                <div className="text-center space-y-4">
-                  <Sparkles className="h-24 w-24 text-primary-600 dark:text-primary-400 mx-auto" />
-                  <p className="text-xl font-medium text-gray-700 dark:text-gray-300">
-                    Building the Future of Web
-                  </p>
-                </div>
+              <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src={aboutPhoto}
+                  alt="Abdulrahman Omar - About"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-4 -right-4 bg-primary-600 text-white rounded-full p-4 shadow-lg">
+                <GraduationCap className="h-8 w-8" />
               </div>
             </div>
           </div>
@@ -201,11 +213,143 @@ const Home = () => {
             </div>
           </div>
 
-          {/* CTA */}
-          <div className="text-center mt-12">
-            <Button href="/projects" size="lg">
-              View My Work
-            </Button>
+          {/* Latest Projects Section */}
+          <div className="mt-20">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+                Latest Projects
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                A glimpse into my recent work and creative solutions
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {projects.slice(0, 3).map((project) => (
+                <Card
+                  key={project.id}
+                  title={project.title}
+                  description={project.description}
+                  image={project.images[0]}
+                  category={project.techStack.includes('React.js') ? 'Frontend' : 
+                            project.techStack.includes('Node.js') ? 'Backend' : 'Full Stack'}
+                  year={project.year}
+                  href={`/projects/${project.slug}`}
+                  className="transform hover:-translate-y-1 transition-transform duration-200"
+                >
+                  {/* Tech Stack */}
+                  <div className="mb-4">
+                    <div className="flex flex-wrap gap-2">
+                      {project.techStack.slice(0, 3).map((tech, index) => (
+                        <span
+                          key={index}
+                          className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 text-xs font-medium rounded"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                      {project.techStack.length > 3 && (
+                        <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 text-xs font-medium rounded">
+                          +{project.techStack.length - 3}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                </Card>
+              ))}
+            </div>
+
+            {/* View All Projects Button */}
+            <div className="text-center mt-12">
+              <Button 
+                href="/projects" 
+                size="lg"
+                className="bg-primary-600 hover:bg-primary-700 text-white border-2 border-primary-600 hover:border-primary-700 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 inline-flex items-center"
+              >
+                View All Projects
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </div>
+          </div>
+
+          {/* Photo Gallery Section */}
+          <div className="mt-20">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+                Photo Gallery
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                A collection of moments and memories from my journey
+              </p>
+            </div>
+
+            <div className="columns-2 md:columns-3 gap-4 space-y-4">
+              <div className="break-inside-avoid">
+                <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                  <img
+                    src={gallery1}
+                    alt="Gallery Image 1"
+                    className="w-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                </div>
+              </div>
+              
+              <div className="break-inside-avoid">
+                <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                  <img
+                    src={gallery2}
+                    alt="Gallery Image 2"
+                    className="w-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                </div>
+              </div>
+              
+              <div className="break-inside-avoid">
+                <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                  <img
+                    src={gallery3}
+                    alt="Gallery Image 3"
+                    className="w-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                </div>
+              </div>
+              
+              <div className="break-inside-avoid">
+                <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                  <img
+                    src={gallery4}
+                    alt="Gallery Image 4"
+                    className="w-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                </div>
+              </div>
+              
+              <div className="break-inside-avoid">
+                <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                  <img
+                    src={gallery5}
+                    alt="Gallery Image 5"
+                    className="w-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                </div>
+              </div>
+              
+              <div className="break-inside-avoid">
+                <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                  <img
+                    src={gallery6}
+                    alt="Gallery Image 6"
+                    className="w-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         </div>

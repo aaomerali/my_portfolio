@@ -7,17 +7,17 @@ const Footer = () => {
   const socialLinks = [
     {
       name: 'GitHub',
-      href: 'https://github.com/abdulrahman',
+      href: 'https://github.com/aaomerali',
       icon: GithubIcon,
     },
     {
       name: 'LinkedIn',
-      href: 'https://linkedin.com/in/abdulrahman-omar',
+      href: 'https://linkedin.com/in/aaomerali',
       icon: LinkedinIcon,
     },
     {
       name: 'Email',
-      href: 'mailto:abdulrahman.omar@example.com',
+      href: 'aaomerali@gmail.com',
       icon: MailIcon,
     }
   ];
@@ -91,14 +91,14 @@ const Footer = () => {
                 Based in Istanbul, Turkey
               </p>
               <p className="text-gray-600 dark:text-gray-400">
-                Software Engineering Student
+                Software Engineering Developer
               </p>
               <a
-                href="mailto:abdulrahman.omar@example.com"
+                href="mailto:aaomerali@gmail.com"
                 className="inline-flex items-center text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 transition-colors duration-200"
               >
                 <MailIcon className="h-4 w-4 mr-2" />
-                abdulrahman.omar@example.com
+                aaomerali@gmail.com
               </a>
             </div>
           </div>
