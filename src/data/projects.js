@@ -1,3 +1,10 @@
+import gallery1 from '../assets/gallery/1.jpg';
+import gallery2 from '../assets/gallery/2.jpg';
+import gallery3 from '../assets/gallery/3.jpg';
+import gallery4 from '../assets/gallery/4.jpg';
+import gallery5 from '../assets/gallery/5.jpg';
+import gallery6 from '../assets/gallery/6.jpg';
+
 export const projects = [
   {
     id: 1,
@@ -14,13 +21,9 @@ export const projects = [
       'Company reviews and ratings'
     ],
     techStack: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Socket.io', 'JWT'],
-    images: [
-      '/images/hireready-1.png',
-      '/images/hireready-2.png',
-      '/images/hireready-3.png'
-    ],
+    images: [gallery1, gallery2, gallery3],
     liveDemo: 'https://hireready-demo.com',
-    githubRepo: 'https://github.com/abdulrahman/hireready',
+    githubRepo: 'https://github.com/aaomerali/hireready',
     learnings: 'Learned about real-time communication systems and advanced database optimization techniques.',
     challenges: 'Implementing efficient matching algorithms and handling real-time data synchronization.'
   },
@@ -40,12 +43,9 @@ export const projects = [
       'Email notifications'
     ],
     techStack: ['React.js', 'Tailwind CSS', 'Express.js', 'MongoDB', 'Stripe API', 'Nodemailer'],
-    images: [
-      '/images/ecommerce-1.png',
-      '/images/ecommerce-2.png'
-    ],
+    images: [gallery4, gallery5],
     liveDemo: 'https://ecommerce-demo.com',
-    githubRepo: 'https://github.com/abdulrahman/ecommerce',
+    githubRepo: 'https://github.com/aaomerali/ecommerce',
     learnings: 'Gained experience with payment gateway integration and complex state management.',
     challenges: 'Implementing secure payment processing and managing complex inventory relationships.'
   },
@@ -65,13 +65,9 @@ export const projects = [
       'Analytics dashboard'
     ],
     techStack: ['React.js', 'Firebase', 'Tailwind CSS', 'Chart.js', 'React DnD'],
-    images: [
-      '/images/taskmanager-1.png',
-      '/images/taskmanager-2.png',
-      '/images/taskmanager-3.png'
-    ],
+    images: [gallery6, gallery1, gallery2],
     liveDemo: 'https://taskmanager-demo.com',
-    githubRepo: 'https://github.com/abdulrahman/taskmanager',
+    githubRepo: 'https://github.com/aaomerali/taskmanager',
     learnings: 'Mastered Firebase real-time database and learned about collaborative UI patterns.',
     challenges: 'Implementing real-time synchronization and handling concurrent user actions.'
   }
