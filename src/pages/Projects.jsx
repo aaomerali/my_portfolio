@@ -105,6 +105,7 @@ const Projects = () => {
                 title={project.title}
                 description={project.description}
                 image={project.images[0]}
+                cardImage={project.cardImage}
                 category={project.techStack.includes('React.js') ? 'Frontend' : 
                           project.techStack.includes('Node.js') ? 'Backend' : 'Full Stack'}
                 year={project.year}

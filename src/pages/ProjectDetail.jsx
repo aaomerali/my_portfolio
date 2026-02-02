@@ -134,9 +134,6 @@ const ProjectDetail = () => {
                   src={project.images[currentImageIndex]}
                   alt={`${project.title} - Screenshot ${currentImageIndex + 1}`}
                   className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.target.src = `https://via.placeholder.com/800x450?text=Screenshot+${currentImageIndex + 1}`;
-                  }}
                 />
                 
                 {/* Navigation Arrows */}

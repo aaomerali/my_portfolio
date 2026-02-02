@@ -5,6 +5,7 @@ const Card = ({
   title,
   description,
   image,
+  cardImage,
   category,
   year,
   href,
@@ -16,13 +17,16 @@ const Card = ({
   const baseClasses = 'bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700';
   const classes = `${baseClasses} ${className}`;
 
+  // Use cardImage if provided, otherwise use the first image from images array
+  const displayImage = cardImage || image;
+
   const cardContent = (
     <>
       {/* Image Section */}
-      {image && (
+      {displayImage && (
         <div className="relative h-48 overflow-hidden bg-gray-100 dark:bg-gray-700">
           <img
-            src={image}
+            src={displayImage}
             alt={title}
             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
           />
