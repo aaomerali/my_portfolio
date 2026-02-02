@@ -19,7 +19,7 @@ export const projects = [
     id: 1,
     slug: 'hireready',
     title: 'HireReady',
-    year: 2024,
+    year: 2025,
     description: 'HireReady is an AI-driven career preparation platform designed to bridge the gap between academic study and professional employment. It centralizes essential tools—mock interviews, resume analysis, and job searching—into a single digital ecosystem.',
     problem: 'The project addresses the "Transition Gap" where graduates possess theoretical knowledge but lack the practical skills to enter the job market. Key obstacles identified include:\n\n• Weak Profiles: Resumes that are not ATS-friendly are often filtered out by automated systems.\n\n• Interview Anxiety: A lack of practice leads to poor performance and communication under pressure.\n\n• Platform Scattering: Users often have to juggle multiple, unreliable tools to prepare for their careers.',
     features: [
@@ -31,9 +31,9 @@ export const projects = [
     images: [hireready1, hireready2, hireready3, hireready4, hireready5, hireready6, hireready7, hireready8, hireready9],
     cardImage: hireready1,
     liveDemo: 'https://hireready-demo.com',
-    githubRepo: 'https://github.com/aaomerali/hireready',
-    learnings: 'The project emphasizes robust data management and user experience:\n\n• NoSQL Schema Design: Implementing flexible collections for users, CV metadata, and interview transcripts.\n\n• Security & Isolation: Using Firebase UIDs to ensure strict data isolation so users can only access their personal information.\n\n• UI/UX Integration: Creating a seamless flow from a landing page to a functional dashboard that tracks total interviews and average scores.',
-    challenges: 'Bridging the Gap: Developing an AI that can accurately simulate industry-specific interview questions.\n\n• Real-time Integration: Connecting real-time job APIs with a user-friendly filtering system.\n\n• State Persistence: Ensuring that long interview simulations are not lost mid-session.'
+    githubRepo: 'https://github.com/aaomerali/HireReady-AI-Career-Preparation-Platform',
+    learnings: 'The project emphasizes robust data management and user experience:\n\n• NoSQL Schema Design: Implementing flexible collections for users, CV metadata, and interview transcripts.\n\n• UI/UX Integration: Creating a seamless flow from a landing page to a functional dashboard that tracks total interviews and average scores.',
+    challenges: 'Bridging the Gap: Developing an AI that can accurately simulate industry-specific interview questions.\n\n• Real-time Integration: Connecting real-time job APIs with a user-friendly filtering system.'
   },
   {
     id: 2,
