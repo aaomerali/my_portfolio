@@ -24,12 +24,14 @@ const Card = ({
     <>
       {/* Image Section */}
       {displayImage && (
-        <div className="relative h-48 overflow-hidden bg-gray-100 dark:bg-gray-700">
-          <img
-            src={displayImage}
-            alt={title}
-            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-          />
+        <div className="relative overflow-hidden bg-gray-100 dark:bg-gray-700">
+          <div className="aspect-video">
+            <img
+              src={displayImage}
+              alt={title}
+              className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
+            />
+          </div>
           {category && (
             <div className="absolute top-4 left-4">
               <span className="px-3 py-1 bg-primary-600 text-white text-xs font-medium rounded-full">

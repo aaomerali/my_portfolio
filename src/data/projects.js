@@ -13,6 +13,19 @@ import hireready6 from '../assets/hireready project/6.png';
 import hireready7 from '../assets/hireready project/7.png';
 import hireready8 from '../assets/hireready project/8.png';
 import hireready9 from '../assets/hireready project/9.png';
+import evote1 from '../assets/e-vote platform/1.jpg';
+import evote2 from '../assets/e-vote platform/2.jpg';
+import evote3 from '../assets/e-vote platform/3.jpg';
+import evote4 from '../assets/e-vote platform/4.jpg';
+import evote5 from '../assets/e-vote platform/5.jpg';
+import evote6 from '../assets/e-vote platform/6.jpg';
+import evote7 from '../assets/e-vote platform/7.jpg';
+import haseela1 from '../assets/haseela app/1.png';
+import haseela2 from '../assets/haseela app/2.png';
+import haseela3 from '../assets/haseela app/3.png';
+import haseela4 from '../assets/haseela app/4.png';
+import haseela5 from '../assets/haseela app/5.png';
+import haseela6 from '../assets/haseela app/6.png';
 
 export const projects = [
   {
@@ -37,48 +50,49 @@ export const projects = [
   },
   {
     id: 2,
-    slug: 'ecommerce-platform',
-    title: 'Modern E-Commerce Platform',
+    slug: 'e-voting-platform',
+    title: 'E-Voting Platform',
     year: 2024,
-    description: 'A full-featured e-commerce solution with inventory management and payment processing',
-    problem: 'Small businesses need affordable, scalable e-commerce solutions with easy inventory management.',
+    description: 'The E-Voting Platform is a streamlined web application designed to digitize and manage the electoral process for student organizations. Developed specifically for the Hadhrami Students Forum in Turkey, the platform facilitates secure, online voting for the forum\'s presidency. It provides a dual-interface system: a comprehensive dashboard for the Election Preparatory Committee and a user-friendly voting portal for students.',
+    problem: 'Traditional student elections often face logistical hurdles, including:\n\n• Manual Counting Errors: Slow and error-prone manual tallying of physical ballots.\n\n• Geographic Barriers: Difficulty in gathering students from different Turkish cities in one physical location at the same time.\n\n• Lack of Transparency: The need for a controlled environment to ensure each student votes only once and within the allowed timeframe.\n\n• Delayed Results: Long waiting periods between the end of voting and the announcement of winners.',
     features: [
-      'Product catalog with advanced filtering',
-      'Shopping cart and wishlist',
-      'Secure payment integration',
-      'Order tracking and management',
-      'Admin dashboard for inventory',
-      'Email notifications'
+      'Admin Dashboard: Full management of student/candidate records and real-time election statistics.',
+      'Secure Authentication: Dual-step login using registered email and a unique voting ID.',
+      'Smart Validation: Prevents double-voting, empty ballots, or exceeding the allowed candidate selection.',
+      'Live Election Control: Global toggle to instantly open or close the voting window.',
+      'Instant Results: Automated vote tallying and immediate data visualization for the election committee.',
+      'Responsive UI: A mobile-friendly design with clear instructional guides for a smooth user experience.'
     ],
-    techStack: ['React.js', 'Tailwind CSS', 'Express.js', 'MongoDB', 'Stripe API', 'Nodemailer'],
-    images: [gallery4, gallery5],
-    cardImage: gallery4,
-    liveDemo: 'https://ecommerce-demo.com',
-    githubRepo: 'https://github.com/aaomerali/ecommerce',
-    learnings: 'Gained experience with payment gateway integration and complex state management.',
-    challenges: 'Implementing secure payment processing and managing complex inventory relationships.'
+    techStack: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'Tailwind CSS'],
+    images: [evote1, evote2, evote3, evote4, evote5, evote6, evote7],
+    cardImage: evote1,
+    liveDemo: 'https://e-voting-demo.com',
+    githubRepo: 'https://github.com/aaomerali/e-voting-platform',
+    learnings: 'Real-World Deployment: This project marked my first transition from local development to a live environment used by real people, emphasizing the importance of stability.\n\n• State Management: Gained deep experience in managing complex application states, particularly around authentication and voting permissions.\n\n• Security Mindset: Learned to implement front-end and back-end constraints to prevent unauthorized access or ballot stuffing.\n\n• UX/UI Design: Focused on creating a responsive design that works seamlessly on both mobile and desktop, ensuring accessibility for all students.',
+    challenges: 'Data Integrity: Ensuring that the database remained consistent and that votes were recorded accurately without any possibility of duplication.\n\n• Time Constraints: Delivering a fully functional, bug-free platform within the strict deadline of the forum\'s election cycle.\n\n• Edge Case Handling: Managing scenarios such as users attempting to vote after the deadline or navigating back to the voting page after submission.'
   },
   {
     id: 3,
-    slug: 'task-manager',
-    title: 'Collaborative Task Manager',
-    year: 2023,
-    description: 'A real-time collaborative project management tool for teams',
-    problem: 'Teams need better tools for real-time collaboration and project tracking.',
+    slug: 'haseela',
+    title: 'Haseela',
+    year: 2025,
+    description: 'Haseela is a comprehensive, cloud-native financial management platform tailored specifically for freelancers, independent contractors, and creative professionals. The application serves as a "Digital Harvest" (as the name implies in Arabic), allowing users to track their diverse income streams, manage client relationships, and monitor their progress toward specific financial milestones.',
+    problem: 'Freelancers and independent professionals often struggle with fragmented financial management, using multiple tools to track income, manage clients, and monitor progress toward financial goals, leading to inefficiency and missed opportunities.',
     features: [
-      'Real-time task updates',
-      'Drag-and-drop kanban board',
-      'Team collaboration features',
-      'File attachments',
-      'Time tracking',
-      'Analytics dashboard'
+      'Smart Authentication & Cloud Sync: Secure login with real-time data synchronization across devices.',
+      'Dynamic Financial Dashboard: Real-time overview of income, expenses, and goal progress.',
+      'Advanced Client & Task Management: Comprehensive client relationship management with task tracking.',
+      'Monthly Goal Strategy: Set and track monthly financial goals with progress visualization.',
+      'Performance Reports & Data Visualization: Detailed analytics and visual reports for business insights.',
+      'Earnings Archive (History): Complete historical record of all earnings and transactions.',
+      'Modern UI/UX Design: Intuitive, responsive interface optimized for productivity.'
     ],
-    techStack: ['React.js', 'Firebase', 'Tailwind CSS', 'Chart.js', 'React DnD'],
-    images: [gallery6, gallery1, gallery2],
-    cardImage: gallery6,
-    liveDemo: 'https://taskmanager-demo.com',
-    githubRepo: 'https://github.com/aaomerali/taskmanager',
-    learnings: 'Mastered Firebase real-time database and learned about collaborative UI patterns.',
-    challenges: 'Implementing real-time synchronization and handling concurrent user actions.'
+    techStack: ['React.js', 'Tailwind CSS', 'Supabase'],
+    images: [haseela1, haseela2, haseela3, haseela4, haseela5, haseela6],
+    cardImage: haseela1,
+    liveDemo: 'https://haseela.vercel.app/',
+    githubRepo: 'https://github.com/aaomerali/haseela',
+    learnings: 'Financial Logic Programming: Gained experience in developing precise algorithms for calculating goal progress, monthly averages, and projected earnings based on active tasks.',
+    challenges: 'Complex State Synchronization: Ensuring the Dynamic Dashboard reflected changes immediately after a task was completed or a client was edited required a robust state management strategy.'
   }
 ];

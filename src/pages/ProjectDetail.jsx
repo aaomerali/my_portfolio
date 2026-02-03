@@ -133,7 +133,7 @@ const ProjectDetail = () => {
                 <img
                   src={project.images[currentImageIndex]}
                   alt={`${project.title} - Screenshot ${currentImageIndex + 1}`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
                 
                 {/* Navigation Arrows */}
