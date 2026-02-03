@@ -3,49 +3,20 @@ import Card from '../components/Card';
 import { projects } from '../data/projects';
 import { 
   Code, 
-  Server, 
-  Settings,
   Search
 } from 'lucide-react';
 
 const Projects = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
 
-  // Get unique categories from projects
-  const categories = ['All', ...new Set(projects.map(project => 
-    project.techStack.includes('React.js') ? 'Frontend' :
-    project.techStack.includes('Node.js') || project.techStack.includes('Express.js') ? 'Backend' :
-    project.techStack.includes('MongoDB') || project.techStack.includes('Firebase') ? 'Database' : 'Full Stack'
-  ))];
-
-  // Filter projects based on search and category
+  // Filter projects based on search
   const filteredProjects = projects.filter(project => {
     const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          project.techStack.some(tech => tech.toLowerCase().includes(searchTerm.toLowerCase()));
     
-    const matchesCategory = selectedCategory === 'All' || 
-      (selectedCategory === 'Frontend' && project.techStack.includes('React.js')) ||
-      (selectedCategory === 'Backend' && (project.techStack.includes('Node.js') || project.techStack.includes('Express.js'))) ||
-      (selectedCategory === 'Database' && (project.techStack.includes('MongoDB') || project.techStack.includes('Firebase'))) ||
-      (selectedCategory === 'Full Stack' && project.techStack.includes('React.js') && (project.techStack.includes('Node.js') || project.techStack.includes('Express.js')));
-    
-    return matchesSearch && matchesCategory;
+    return matchesSearch;
   });
-
-  const getCategoryIcon = (category) => {
-    switch(category) {
-      case 'Frontend':
-        return <Code className="h-5 w-5" />;
-      case 'Backend':
-        return <Server className="h-5 w-5" />;
-      case 'Database':
-        return <Settings className="h-5 w-5" />;
-      default:
-        return <Code className="h-5 w-5" />;
-    }
-  };
 
   return (
     <div className="page-container">
@@ -64,7 +35,7 @@ const Projects = () => {
         {/* Search and Filter */}
         <div className="mb-12 space-y-6 max-w-7xl mx-auto">
           {/* Search Bar */}
-          <div className="relative max-w-2xl mx-auto">
+          <div className="relative max-w-2xl mx-auto mb-12">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
               <Search className="h-5 w-5 text-gray-400" />
             </div>
@@ -75,24 +46,6 @@ const Projects = () => {
               onChange={(e) => setSearchTerm(e.target.value)}
               className="block w-full pl-10 pr-3 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200"
             />
-          </div>
-
-          {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-2">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-2 rounded-full font-medium transition-all duration-200 ${
-                  selectedCategory === category
-                    ? 'bg-primary-600 text-white shadow-lg transform scale-105'
-                    : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
-                }`}
-              >
-                {getCategoryIcon(category)}
-                <span className="ml-2">{category}</span>
-              </button>
-            ))}
           </div>
         </div>
 
@@ -106,8 +59,6 @@ const Projects = () => {
                 description={project.description}
                 image={project.images[0]}
                 cardImage={project.cardImage}
-                category={project.techStack.includes('React.js') ? 'Frontend' : 
-                          project.techStack.includes('Node.js') ? 'Backend' : 'Full Stack'}
                 year={project.year}
                 href={`/projects/${project.slug}`}
                 className="transform hover:-translate-y-1 transition-transform duration-200"

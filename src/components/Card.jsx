@@ -6,7 +6,6 @@ const Card = ({
   description,
   image,
   cardImage,
-  category,
   year,
   href,
   external = false,
@@ -32,13 +31,6 @@ const Card = ({
               className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
             />
           </div>
-          {category && (
-            <div className="absolute top-4 left-4">
-              <span className="px-3 py-1 bg-primary-600 text-white text-xs font-medium rounded-full">
-                {category}
-              </span>
-            </div>
-          )}
         </div>
       )}
 
