@@ -3,6 +3,7 @@ import Button from '../components/Button';
 import Card from '../components/Card';
 import { technicalSkills, softSkills } from '../data/skills';
 import { projects } from '../data/projects';
+import { designWorks } from '../data/designWorks';
 import { 
   Code, 
   GraduationCap, 
@@ -266,6 +267,51 @@ const Home = () => {
                 className="bg-primary-600 hover:bg-primary-700 text-white border-2 border-primary-600 hover:border-primary-700 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 inline-flex items-center"
               >
                 View All Projects
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </div>
+          </div>
+
+          {/* Latest Designs Section */}
+          <div className="mt-20">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+                Latest Designs
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                Explore my creative work across different design categories
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {designWorks.slice(0, 3).map((design) => (
+                <Card
+                  key={design.id}
+                  title={design.title}
+                  description={design.description}
+                  image={design.image}
+                  year={design.year}
+                  href={`/design#${design.category}`}
+                  className="transform hover:-translate-y-1 transition-transform duration-200"
+                >
+                  {/* Category Badge */}
+                  <div className="mb-4">
+                    <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-400 text-sm font-medium rounded-full">
+                      {design.category}
+                    </span>
+                  </div>
+                </Card>
+              ))}
+            </div>
+
+            {/* View All Designs Button */}
+            <div className="text-center mt-12">
+              <Button 
+                href="/design" 
+                size="lg"
+                className="bg-primary-600 hover:bg-primary-700 text-white border-2 border-primary-600 hover:border-primary-700 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 inline-flex items-center"
+              >
+                View All Designs
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </div>
