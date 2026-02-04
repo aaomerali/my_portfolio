@@ -1,9 +1,4 @@
-import gallery1 from '../assets/gallery/1.jpg';
-import gallery2 from '../assets/gallery/2.jpg';
-import gallery3 from '../assets/gallery/3.jpg';
-import gallery4 from '../assets/gallery/4.jpg';
-import gallery5 from '../assets/gallery/5.jpg';
-import gallery6 from '../assets/gallery/6.jpg';
+
 import hireready1 from '../assets/hireready project/1.png';
 import hireready2 from '../assets/hireready project/2.png';
 import hireready3 from '../assets/hireready project/3.png';
@@ -66,8 +61,8 @@ export const projects = [
     techStack: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'Tailwind CSS'],
     images: [evote1, evote2, evote3, evote4, evote5, evote6, evote7],
     cardImage: evote1,
-    liveDemo: 'https://e-voting-demo.com',
-    githubRepo: 'https://github.com/aaomerali/e-voting-platform',
+    liveDemo: 'hadrami-voting-platform.vercel.app',
+    githubRepo: 'https://github.com/aaomerali/Hadrami-Forum-Election-Platform',
     learnings: 'Real-World Deployment: This project marked my first transition from local development to a live environment used by real people, emphasizing the importance of stability.\n\n• State Management: Gained deep experience in managing complex application states, particularly around authentication and voting permissions.\n\n• Security Mindset: Learned to implement front-end and back-end constraints to prevent unauthorized access or ballot stuffing.\n\n• UX/UI Design: Focused on creating a responsive design that works seamlessly on both mobile and desktop, ensuring accessibility for all students.',
     challenges: 'Data Integrity: Ensuring that the database remained consistent and that votes were recorded accurately without any possibility of duplication.\n\n• Time Constraints: Delivering a fully functional, bug-free platform within the strict deadline of the forum\'s election cycle.\n\n• Edge Case Handling: Managing scenarios such as users attempting to vote after the deadline or navigating back to the voting page after submission.'
   },
