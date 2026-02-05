@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useDarkMode } from './hooks/useDarkMode';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import ProjectDetail from './pages/ProjectDetail';
@@ -13,6 +14,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className={`min-h-screen ${darkMode ? 'dark' : ''} w-full overflow-x-hidden`}>
         <div className="bg-white dark:bg-gray-900 transition-colors duration-300 min-h-screen flex flex-col w-full">
           <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />

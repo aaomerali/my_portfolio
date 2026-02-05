@@ -95,19 +95,19 @@ const Contact = () => {
   const socialLinks = [
     {
       name: 'GitHub',
-      href: 'https://github.com/abdulrahman',
+      href: 'https://github.com/aaomerali',
       icon: Github,
       color: 'hover:bg-gray-800'
     },
     {
       name: 'LinkedIn',
-      href: 'https://linkedin.com/in/abdulrahman-omar',
+      href: 'https://linkedin.com/in/aaomerali',
       icon: Linkedin,
       color: 'hover:bg-blue-600'
     },
     {
       name: 'Email',
-      href: 'mailto:abdulrahman.omar@example.com',
+      href: 'mailto:aaomerali@gmail.com',
       icon: MailIcon,
       color: 'hover:bg-red-600'
     }
@@ -352,17 +352,6 @@ const Contact = () => {
                   );
                 })}
               </div>
-            </div>
-
-            {/* Response Time */}
-            <div className="bg-primary-50 dark:bg-primary-900/20 rounded-2xl p-6 border border-primary-200 dark:border-primary-800">
-              <h3 className="font-semibold text-primary-900 dark:text-primary-100 mb-2">
-                Response Time
-              </h3>
-              <p className="text-primary-700 dark:text-primary-300 text-sm">
-                I typically respond to messages within 24-48 hours. For urgent matters, 
-                please mention it in your message subject.
-              </p>
             </div>
           </div>
         </div>
