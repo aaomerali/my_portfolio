@@ -4,9 +4,9 @@ import Card from '../components/Card';
 import { technicalSkills, softSkills } from '../data/skills';
 import { projects } from '../data/projects';
 import { designWorks } from '../data/designWorks';
-import { 
-  Code, 
-  GraduationCap, 
+import {
+  Code,
+  GraduationCap,
   Sparkles,
   ChevronDown,
   ArrowRight
@@ -61,25 +61,25 @@ const Home = () => {
 
             {/* Bio */}
             <p className="max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-              Passionate web developer building modern, scalable applications using React, Node.js, and MongoDB. 
+              Passionate web developer building modern, scalable applications using React, Node.js, and MongoDB.
               Combining strong technical skills with 5+ years of graphic design expertise to create beautiful, functional digital experiences.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                href="/contact" 
+              <Button
+                href="/contact"
                 variant="primary"
                 size="lg"
                 className="bg-primary-600 hover:bg-primary-700 text-white border-2 border-primary-600 hover:border-primary-700 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
               >
                 Contact Me
               </Button>
-              <Button 
-                href="/resume.pdf" 
+              <Button
+                href="https://drive.google.com/file/d/1gmU1VKyl2hrOzU1nfvk2TLRnKbr6Wgi8/view?usp=sharing"
                 variant="outline"
                 size="lg"
-                download
+                target="_blank"
                 className="border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white dark:border-primary-400 dark:text-primary-400 dark:hover:bg-primary-400 dark:hover:text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
               >
                 Download Resume
@@ -99,304 +99,304 @@ const Home = () => {
         <div className="full-width-container">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <div className="flex items-center space-x-3">
-                <GraduationCap className="h-8 w-8 text-primary-600 dark:text-primary-400" />
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100">
-                  About Me
-                </h2>
-              </div>
-              
-              <div className="space-y-4 text-gray-600 dark:text-gray-400">
-                <p>
-                  I'm a Software Engineering student at Istanbul Nişantaşı University, expected to graduate in 2026 with a current GPA of 3.36. 
-                  My journey in web development started with a curiosity about how things work on the internet, and has evolved into a passion for creating impactful digital solutions.
-                </p>
-                
-                <p>
-                  With a strong foundation in full stack development and over 5 years of graphic design experience, I bring a unique perspective to web development. 
-                  I focus on building clean, intuitive user interfaces while ensuring robust backend functionality.
-                </p>
-                
-                <p>
-                  I'm particularly interested in React.js, Node.js, and modern web technologies that allow me to create scalable, performant applications. 
-                  My design background helps me bridge the gap between aesthetics and functionality, ensuring that the applications I build are not only powerful but also visually appealing.
-                </p>
+              <div className="space-y-6">
+                <div className="flex items-center space-x-3">
+                  <GraduationCap className="h-8 w-8 text-primary-600 dark:text-primary-400" />
+                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100">
+                    About Me
+                  </h2>
+                </div>
+
+                <div className="space-y-4 text-gray-600 dark:text-gray-400">
+                  <p>
+                    I'm a Software Engineering student at Istanbul Nişantaşı University, expected to graduate in 2026 with a current GPA of 3.36.
+                    My journey in web development started with a curiosity about how things work on the internet, and has evolved into a passion for creating impactful digital solutions.
+                  </p>
+
+                  <p>
+                    With a strong foundation in full stack development and over 5 years of graphic design experience, I bring a unique perspective to web development.
+                    I focus on building clean, intuitive user interfaces while ensuring robust backend functionality.
+                  </p>
+
+                  <p>
+                    I'm particularly interested in React.js, Node.js, and modern web technologies that allow me to create scalable, performant applications.
+                    My design background helps me bridge the gap between aesthetics and functionality, ensuring that the applications I build are not only powerful but also visually appealing.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-2 gap-4 pt-4">
+                  <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                    <p className="text-2xl font-bold text-primary-600 dark:text-primary-400">3.36</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">GPA</p>
+                  </div>
+                  <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                    <p className="text-2xl font-bold text-primary-600 dark:text-primary-400">2026</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Graduation</p>
+                  </div>
+                </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-4 pt-4">
-                <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
-                  <p className="text-2xl font-bold text-primary-600 dark:text-primary-400">3.36</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">GPA</p>
+              <div className="relative">
+                <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
+                  <img
+                    src={aboutPhoto}
+                    alt="Abdulrahman Omar - About"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
-                  <p className="text-2xl font-bold text-primary-600 dark:text-primary-400">2026</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Graduation</p>
+                <div className="absolute -bottom-4 -right-4 bg-primary-600 text-white rounded-full p-4 shadow-lg">
+                  <GraduationCap className="h-8 w-8" />
                 </div>
-              </div>
-            </div>
-
-            <div className="relative">
-              <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src={aboutPhoto}
-                  alt="Abdulrahman Omar - About"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute -bottom-4 -right-4 bg-primary-600 text-white rounded-full p-4 shadow-lg">
-                <GraduationCap className="h-8 w-8" />
               </div>
             </div>
           </div>
         </div>
-      </div>
       </section>
 
       {/* Skills Section */}
       <section className="py-20 bg-gray-50 dark:bg-gray-800">
         <div className="full-width-container">
           <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-              Skills & Expertise
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              A comprehensive skill set combining technical expertise with creative problem-solving
-            </p>
-          </div>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+                Skills & Expertise
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                A comprehensive skill set combining technical expertise with creative problem-solving
+              </p>
+            </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Technical Skills */}
-            <div className="space-y-6">
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6">
-                Technical Skills
-              </h3>
-              <div className="space-y-4">
-                {technicalSkills.map((skill, index) => (
-                  <div key={index} className="space-y-2">
-                    <div className="flex justify-between items-center">
-                      <span className="font-medium text-gray-700 dark:text-gray-300">
-                        {skill.name}
-                      </span>
-                      <span className="text-sm text-gray-500 dark:text-gray-400">
-                        {skill.level}%
-                      </span>
+            <div className="grid lg:grid-cols-2 gap-12">
+              {/* Technical Skills */}
+              <div className="space-y-6">
+                <h3 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6">
+                  Technical Skills
+                </h3>
+                <div className="space-y-4">
+                  {technicalSkills.map((skill, index) => (
+                    <div key={index} className="space-y-2">
+                      <div className="flex justify-between items-center">
+                        <span className="font-medium text-gray-700 dark:text-gray-300">
+                          {skill.name}
+                        </span>
+                        <span className="text-sm text-gray-500 dark:text-gray-400">
+                          {skill.level}%
+                        </span>
+                      </div>
+                      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                        <div
+                          className="bg-primary-600 h-2 rounded-full transition-all duration-1000 ease-out"
+                          style={{ width: `${skill.level}%` }}
+                        />
+                      </div>
                     </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                      <div 
-                        className="bg-primary-600 h-2 rounded-full transition-all duration-1000 ease-out"
-                        style={{ width: `${skill.level}%` }}
-                      />
+                  ))}
+                </div>
+              </div>
+
+              {/* Soft Skills */}
+              <div className="space-y-6">
+                <h3 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6">
+                  Soft Skills
+                </h3>
+                <div className="grid grid-cols-2 gap-4">
+                  {softSkills.map((skill, index) => (
+                    <div
+                      key={index}
+                      className="bg-white dark:bg-gray-900 p-4 rounded-lg border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow duration-200"
+                    >
+                      <p className="font-medium text-gray-700 dark:text-gray-300">
+                        {skill}
+                      </p>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
 
-            {/* Soft Skills */}
-            <div className="space-y-6">
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6">
-                Soft Skills
-              </h3>
-              <div className="grid grid-cols-2 gap-4">
-                {softSkills.map((skill, index) => (
-                  <div 
-                    key={index}
-                    className="bg-white dark:bg-gray-900 p-4 rounded-lg border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow duration-200"
+            {/* Latest Projects Section */}
+            <div className="mt-20">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+                  Latest Projects
+                </h2>
+                <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                  A glimpse into my recent work and creative solutions
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {projects.slice(0, 3).map((project) => (
+                  <Card
+                    key={project.id}
+                    title={project.title}
+                    description={project.description}
+                    image={project.images[0]}
+                    cardImage={project.cardImage}
+                    year={project.year}
+                    href={`/projects/${project.slug}`}
+                    className="transform hover:-translate-y-1 transition-transform duration-200"
                   >
-                    <p className="font-medium text-gray-700 dark:text-gray-300">
-                      {skill}
-                    </p>
-                  </div>
+                    {/* Tech Stack */}
+                    <div className="mb-4">
+                      <div className="flex flex-wrap gap-2">
+                        {project.techStack.slice(0, 3).map((tech, index) => (
+                          <span
+                            key={index}
+                            className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 text-xs font-medium rounded"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                        {project.techStack.length > 3 && (
+                          <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 text-xs font-medium rounded">
+                            +{project.techStack.length - 3}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  </Card>
                 ))}
               </div>
-            </div>
-          </div>
 
-          {/* Latest Projects Section */}
-          <div className="mt-20">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-                Latest Projects
-              </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-                A glimpse into my recent work and creative solutions
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {projects.slice(0, 3).map((project) => (
-                <Card
-                  key={project.id}
-                  title={project.title}
-                  description={project.description}
-                  image={project.images[0]}
-                  cardImage={project.cardImage}
-                  year={project.year}
-                  href={`/projects/${project.slug}`}
-                  className="transform hover:-translate-y-1 transition-transform duration-200"
+              {/* View All Projects Button */}
+              <div className="text-center mt-12">
+                <Button
+                  href="/projects"
+                  size="lg"
+                  className="bg-primary-600 hover:bg-primary-700 text-white border-2 border-primary-600 hover:border-primary-700 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 inline-flex items-center"
                 >
-                  {/* Tech Stack */}
-                  <div className="mb-4">
-                    <div className="flex flex-wrap gap-2">
-                      {project.techStack.slice(0, 3).map((tech, index) => (
-                        <span
-                          key={index}
-                          className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 text-xs font-medium rounded"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                      {project.techStack.length > 3 && (
-                        <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 text-xs font-medium rounded">
-                          +{project.techStack.length - 3}
-                        </span>
-                      )}
+                  View All Projects
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </div>
+            </div>
+
+            {/* Latest Designs Section */}
+            <div className="mt-20">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+                  Latest Designs
+                </h2>
+                <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                  Explore my creative work across different design categories
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {designWorks.slice(0, 3).map((design) => (
+                  <Card
+                    key={design.id}
+                    title={design.title}
+                    description={design.description}
+                    image={design.image}
+                    year={design.year}
+                    href={`/design#${design.category}`}
+                    className="transform hover:-translate-y-1 transition-transform duration-200"
+                  >
+                    {/* Category Badge */}
+                    <div className="mb-4">
+                      <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-400 text-sm font-medium rounded-full">
+                        {design.category}
+                      </span>
                     </div>
-                  </div>
-                </Card>
-              ))}
-            </div>
+                  </Card>
+                ))}
+              </div>
 
-            {/* View All Projects Button */}
-            <div className="text-center mt-12">
-              <Button 
-                href="/projects" 
-                size="lg"
-                className="bg-primary-600 hover:bg-primary-700 text-white border-2 border-primary-600 hover:border-primary-700 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 inline-flex items-center"
-              >
-                View All Projects
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </div>
-          </div>
-
-          {/* Latest Designs Section */}
-          <div className="mt-20">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-                Latest Designs
-              </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-                Explore my creative work across different design categories
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {designWorks.slice(0, 3).map((design) => (
-                <Card
-                  key={design.id}
-                  title={design.title}
-                  description={design.description}
-                  image={design.image}
-                  year={design.year}
-                  href={`/design#${design.category}`}
-                  className="transform hover:-translate-y-1 transition-transform duration-200"
+              {/* View All Designs Button */}
+              <div className="text-center mt-12">
+                <Button
+                  href="/design"
+                  size="lg"
+                  className="bg-primary-600 hover:bg-primary-700 text-white border-2 border-primary-600 hover:border-primary-700 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 inline-flex items-center"
                 >
-                  {/* Category Badge */}
-                  <div className="mb-4">
-                    <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-400 text-sm font-medium rounded-full">
-                      {design.category}
-                    </span>
+                  View All Designs
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </div>
+            </div>
+
+            {/* Photo Gallery Section */}
+            <div className="mt-20">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+                  Photo Gallery
+                </h2>
+                <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                  A collection of moments and memories from my journey
+                </p>
+              </div>
+
+              <div className="columns-2 md:columns-3 gap-4 space-y-4">
+                <div className="break-inside-avoid">
+                  <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                    <img
+                      src={gallery1}
+                      alt="Gallery Image 1"
+                      className="w-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
                   </div>
-                </Card>
-              ))}
-            </div>
+                </div>
 
-            {/* View All Designs Button */}
-            <div className="text-center mt-12">
-              <Button 
-                href="/design" 
-                size="lg"
-                className="bg-primary-600 hover:bg-primary-700 text-white border-2 border-primary-600 hover:border-primary-700 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 inline-flex items-center"
-              >
-                View All Designs
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </div>
-          </div>
+                <div className="break-inside-avoid">
+                  <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                    <img
+                      src={gallery2}
+                      alt="Gallery Image 2"
+                      className="w-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                  </div>
+                </div>
 
-          {/* Photo Gallery Section */}
-          <div className="mt-20">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-                Photo Gallery
-              </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-                A collection of moments and memories from my journey
-              </p>
-            </div>
+                <div className="break-inside-avoid">
+                  <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                    <img
+                      src={gallery3}
+                      alt="Gallery Image 3"
+                      className="w-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                  </div>
+                </div>
 
-            <div className="columns-2 md:columns-3 gap-4 space-y-4">
-              <div className="break-inside-avoid">
-                <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                  <img
-                    src={gallery1}
-                    alt="Gallery Image 1"
-                    className="w-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                <div className="break-inside-avoid">
+                  <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                    <img
+                      src={gallery4}
+                      alt="Gallery Image 4"
+                      className="w-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                  </div>
                 </div>
-              </div>
-              
-              <div className="break-inside-avoid">
-                <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                  <img
-                    src={gallery2}
-                    alt="Gallery Image 2"
-                    className="w-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+
+                <div className="break-inside-avoid">
+                  <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                    <img
+                      src={gallery5}
+                      alt="Gallery Image 5"
+                      className="w-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                  </div>
                 </div>
-              </div>
-              
-              <div className="break-inside-avoid">
-                <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                  <img
-                    src={gallery3}
-                    alt="Gallery Image 3"
-                    className="w-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
-                </div>
-              </div>
-              
-              <div className="break-inside-avoid">
-                <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                  <img
-                    src={gallery4}
-                    alt="Gallery Image 4"
-                    className="w-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
-                </div>
-              </div>
-              
-              <div className="break-inside-avoid">
-                <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                  <img
-                    src={gallery5}
-                    alt="Gallery Image 5"
-                    className="w-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
-                </div>
-              </div>
-              
-              <div className="break-inside-avoid">
-                <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                  <img
-                    src={gallery6}
-                    alt="Gallery Image 6"
-                    className="w-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+
+                <div className="break-inside-avoid">
+                  <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                    <img
+                      src={gallery6}
+                      alt="Gallery Image 6"
+                      className="w-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
         </div>
       </section>
     </div>
