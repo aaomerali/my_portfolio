@@ -2,6 +2,9 @@
 
 A modern, responsive portfolio website built with React, Vite, and Tailwind CSS for Abdulrahman Omar, a Software Engineering student and Full Stack Web Developer based in Istanbul, Turkey.
 
+![Image Alt](https://github.com/aaomerali/my_portfolio/blob/main/portfolio.png)
+
+
 ## 🚀 Features
 
 - **Modern Design**: Clean, professional UI with smooth animations and transitions
