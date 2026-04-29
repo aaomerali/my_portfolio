@@ -76,30 +76,6 @@ export const projects = [
   },
   {
     id: 3,
-    slug: 'haseela',
-    title: 'Haseela',
-    year: 2025,
-    description: 'Haseela is a comprehensive, cloud-native financial management platform tailored specifically for freelancers, independent contractors, and creative professionals. The application serves as a "Digital Harvest" (as the name implies in Arabic), allowing users to track their diverse income streams, manage client relationships, and monitor their progress toward specific financial milestones.',
-    problem: 'Freelancers and independent professionals often struggle with fragmented financial management, using multiple tools to track income, manage clients, and monitor progress toward financial goals, leading to inefficiency and missed opportunities.',
-    features: [
-      'Smart Authentication & Cloud Sync: Secure login with real-time data synchronization across devices.',
-      'Dynamic Financial Dashboard: Real-time overview of income, expenses, and goal progress.',
-      'Advanced Client & Task Management: Comprehensive client relationship management with task tracking.',
-      'Monthly Goal Strategy: Set and track monthly financial goals with progress visualization.',
-      'Performance Reports & Data Visualization: Detailed analytics and visual reports for business insights.',
-      'Earnings Archive (History): Complete historical record of all earnings and transactions.',
-      'Modern UI/UX Design: Intuitive, responsive interface optimized for productivity.'
-    ],
-    techStack: ['React.js', 'Tailwind CSS', 'Supabase'],
-    images: [haseela1, haseela2, haseela3, haseela4, haseela5, haseela6],
-    cardImage: haseela1,
-    liveDemo: 'https://haseela.vercel.app/',
-    githubRepo: 'https://github.com/aaomerali/haseela',
-    learnings: 'Financial Logic Programming: Gained experience in developing precise algorithms for calculating goal progress, monthly averages, and projected earnings based on active tasks.',
-    challenges: 'Complex State Synchronization: Ensuring the Dynamic Dashboard reflected changes immediately after a task was completed or a client was edited required a robust state management strategy.'
-  },
-  {
-    id: 4,
     slug: 'daftari',
     title: 'Daftari',
     year: 2025,
