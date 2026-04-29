@@ -21,6 +21,14 @@ import haseela3 from '../assets/haseela app/3.png';
 import haseela4 from '../assets/haseela app/4.png';
 import haseela5 from '../assets/haseela app/5.png';
 import haseela6 from '../assets/haseela app/6.png';
+import daftari1 from '../assets/daftarı project/1.jpg';
+import daftari2 from '../assets/daftarı project/2.png';
+import daftari3 from '../assets/daftarı project/3.png';
+import daftari4 from '../assets/daftarı project/4.png';
+import daftari5 from '../assets/daftarı project/5.png';
+import daftari6 from '../assets/daftarı project/6.png';
+import daftari7 from '../assets/daftarı project/7.png';
+import daftari8 from '../assets/daftarı project/8.png';
 
 export const projects = [
   {
@@ -89,5 +97,28 @@ export const projects = [
     githubRepo: 'https://github.com/aaomerali/haseela',
     learnings: 'Financial Logic Programming: Gained experience in developing precise algorithms for calculating goal progress, monthly averages, and projected earnings based on active tasks.',
     challenges: 'Complex State Synchronization: Ensuring the Dynamic Dashboard reflected changes immediately after a task was completed or a client was edited required a robust state management strategy.'
+  },
+  {
+    id: 4,
+    slug: 'daftari',
+    title: 'Daftari',
+    year: 2025,
+    description: 'Daftari (دفتري) is a secure, offline-first desktop application designed specifically for small to medium-sized retail businesses. Featuring a native Arabic Right-to-Left (RTL) interface, it serves as a comprehensive Point of Sale (POS) and accounting solution that helps store owners seamlessly manage their daily operations directly from their local machines.',
+    problem: 'Many small retail store owners struggle to manage their daily operations, inventory, and bookkeeping using either error-prone manual ledgers or complex, cloud-dependent enterprise software. They need a simple, fast, and localized solution that can run completely offline, ensuring absolute data privacy, zero recurring subscription fees, and operational continuity regardless of internet connectivity.',
+    features: [
+      'Comprehensive Accounting Suite: End-to-end management of Point of Sale (POS), Inventory (Products), Expenses, Customers, and Suppliers.',
+      'Unified Invoice Management: Centralized handling of Sales and Purchases invoices, featuring real-time search, advanced filtering, and editing capabilities.',
+      'Thermal Printing Support: Custom-optimized functionality for generating and printing 80mm receipts directly to local thermal printers.',
+      'Secure Authentication: Built-in local login and user management system utilizing robust SHA-256 password hashing.',
+      'Interactive Dashboard: Visual analytics and data reporting to track business performance over time.',
+      'Dynamic Configuration: Real-time application settings for customizing store details, user profiles, and local currencies.'
+    ],
+    techStack: ['React.js', 'Electron.js', 'TypeScript', 'Tailwind CSS', 'Lucide React', 'better-sqlite3', 'Zustand', 'React Router DOM', 'Recharts', 'jsPDF'],
+    images: [daftari1, daftari2, daftari3, daftari4, daftari5, daftari6, daftari7, daftari8],
+    cardImage: daftari1,
+    liveDemo: '',
+    githubRepo: '',
+    learnings: 'Offline-First Architecture: Gained deep knowledge of building robust applications that rely entirely on local storage while maintaining complex features like relational data handling and rapid search.\n\n• Electron & Native Modules: Mastered the integration of native Node.js modules (like better-sqlite3) within an Electron environment.\n\n• Hardware Interaction: Learned the intricacies of interfacing with desktop hardware, specifically optimizing CSS and window behaviors for 80mm thermal receipt printers.\n\n• Advanced State Management: Improved proficiency in managing complex, multi-view application states using Zustand.',
+    challenges: 'Inter-Process Communication (IPC): Designing a secure, bottleneck-free communication bridge between Electron\'s Main process (handling the database) and the React Renderer process.\n\n• Print Layout Optimization: Achieving pixel-perfect print layouts for thermal printers, which required precise CSS media queries and handling variable content lengths dynamically.\n\n• UI/UX Navigation Structuring: Architecting an intuitive user experience, such as logically nesting historical sales views within the POS module to keep the sidebar clean while ensuring features remain highly accessible.\n\n• Local Data Integrity: Designing a rock-solid SQLite schema and ensuring reliable data interactions to prevent corruption in a purely local environment.'
   }
 ];
